@@ -3,10 +3,12 @@
 
 <head>
     <title>Take Quiz</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 
 <body>
     <h1>{{ quiz.title }}</h1>
+    <div class="wrapper">
     <form action="{{ url_for('submit_quiz', quiz_id=quiz._id) }}" method="post">
         {% for question, options in quiz.questions.items() %}
         <p>{{ question }}</p>
@@ -14,8 +16,10 @@
         <input type="radio" name="{{ question }}" value="{{ option }}">{{ option }}<br>
         {% endfor %}
         {% endfor %}
-        <input type="submit" value="Submit">
+        <button class = "another-button" type="submit">submit</button>
+
     </form>
+   </div>
 </body>
 
 </html>
