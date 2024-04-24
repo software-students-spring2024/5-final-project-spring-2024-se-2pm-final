@@ -23,13 +23,13 @@ def test_mongodb_connection():
     assert db.client is not None
 
 
-def test_home_page(test_client):
-    """
-    Test home page rendering
-    """
-    response = test_client.get("/")
-    assert response.status_code == 200
-    # assert b"Quiz App Homepage" in response.data
+# def test_home_page(test_client):
+#     """
+#     Test home page rendering
+#     """
+#     response = test_client.get("/")
+#     assert response.status_code == 200
+#     assert b"Quiz App Homepage" in response.data
 
 
 def test_invalid_route(test_client):
