@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Take Quiz</title>
+</head>
+
+<body>
+    <h1>{{ quiz.title }}</h1>
+    <form action="{{ url_for('submit_quiz', quiz_id=quiz._id) }}" method="post">
+        {% for question, options in quiz.questions.items() %}
+        <p>{{ question }}</p>
+        {% for option in options %}
+        <input type="radio" name="{{ question }}" value="{{ option }}">{{ option }}<br>
+        {% endfor %}
+        {% endfor %}
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>
