@@ -1,6 +1,7 @@
 # Final Project
 
-An exercise to put to practice software development teamwork, subsystem communication, containers, deployment, and CI/CD pipelines. See [instructions](./instructions.md) for details.
+We aim to design and produce a quiz-making app targeted to education market similar to that of quizzlet. Our service will allow the users to make multiple-chioce quizzes
+for their students. Also, the users can answer those question to test their knowledge for the subject.
 
 ## Teammates participating in this project
 
