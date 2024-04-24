@@ -6,7 +6,7 @@
 </head>
 
 <body>
-    <h1>Available Quizzes</h1>
+    <h1>Quiz App Homepage</h1>
     <ul>
         {% for quiz in quizzes %}
         <li><a href="{{ url_for('quiz', quiz_id=quiz._id) }}">{{ quiz.title }}</a></li>
