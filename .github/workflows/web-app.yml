@@ -2,7 +2,7 @@ name: Web-app CI
 on: [push, pull_request]
 
 jobs:
-  lint-and-format:
+  unit-testing:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
