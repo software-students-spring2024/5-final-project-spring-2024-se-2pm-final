@@ -14,5 +14,5 @@ An exercise to put to practice software development teamwork, subsystem communic
 
 1. Open the terminal and direct to the root directory of the project. Then, run the command below.
 ```
-python3 quiz-app/app.py to run
+python3 quiz-app/app.py 
 ```
