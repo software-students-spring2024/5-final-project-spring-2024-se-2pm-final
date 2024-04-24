@@ -11,6 +11,9 @@ python-dotenv = "*"
 certifi = "*"
 pymongo = "*"
 bson = "*"
+pytest = "*"
+pylint = "*"
+black = "*"
 
 [dev-packages]
 
