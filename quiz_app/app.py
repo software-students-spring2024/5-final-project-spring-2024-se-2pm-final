@@ -79,4 +79,4 @@ def add_quiz():
 if __name__ == '__main__':
     app_port = os.getenv("FLASK_PORT", "3000")
     app.run(debug=True, port=app_port)
-# python3 quiz-app/app.py to run
+# python3 quiz_app/app.py to run

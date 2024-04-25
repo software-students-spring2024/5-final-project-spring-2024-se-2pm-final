@@ -5,17 +5,21 @@ name = "pypi"
 
 [packages]
 flask = "*"
-appdirs = "*"
-flask-login = "*"
 python-dotenv = "*"
 certifi = "*"
-pymongo = "*"
-bson = "*"
-pytest = "*"
-pylint = "*"
+gunicorn = "*"
 black = "*"
+pylint = "*"
+pytest = "*"
+flask-login = "*"
+appdirs = "*"
+bson = "*"
+pymongo = "*"
+exceptiongroup = "*"
+tomli = "*"
+dill = "*"
 
 [dev-packages]
 
 [requires]
-python_version = "3.9"
+python_version = "3.12"
