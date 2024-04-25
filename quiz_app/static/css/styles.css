@@ -56,6 +56,16 @@ h2{
     line-height: 38px;
     border-radius: 50%;
 }
+h3{
+    color: white;
+    font-family:"Times New Roman", Times, serif;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    font-size: 3rem;
+    line-height: 38px;
+    border-radius: 50%;
+}
 
 
 a {
@@ -194,6 +204,38 @@ header .icons span:hover {
     margin-left: 150px; 
     text-align: center;
     font-size: 10px;
+    float: left;
+    margin-right: 120px;
+}
+.delete-button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    font-family:"Times New Roman", Times, serif;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 150px; 
+    text-align: center;
+    font-size: 20px;
+    float: left;
+    margin-right: 120px;
+}
+.delete-button:hover {
+    padding: 10px 20px;
+    margin-left: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    font-family:"Times New Roman", Times, serif;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 150px; 
+    text-align: center;
+    font-size: 20px;
     float: left;
     margin-right: 120px;
 }
