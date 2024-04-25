@@ -16,6 +16,8 @@ appdirs = "*"
 bson = "*"
 pymongo = "*"
 exceptiongroup = "*"
+tomli = "*"
+dill = "*"
 
 [dev-packages]
 
