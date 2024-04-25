@@ -13,7 +13,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          cd quiz-app
+          cd quiz_app
           python -m pip install --upgrade pip
           python -m pip install pipenv
           pipenv sync --dev --python $(which python)
