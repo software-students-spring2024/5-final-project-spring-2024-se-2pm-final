@@ -14,7 +14,7 @@ for their students. Also, the users can answer those question to test their know
 ## Instructions to run this project
 ### Running the project in 3 docker containers
 
-1. Open the terminal and direct to the root directory of the project. Then, run the command below.
+1. Open the terminal and direct to the quiz-app directory of the project. Then, run the command below.
 ```
 python3 quiz-app/app.py 
 ```
