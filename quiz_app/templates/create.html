@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Create Quiz</title>
+</head>
+
+<body>
+    <h1>Create a New Quiz</h1>
+    <div class="wrapper">
+    <form action="/create" method="POST">
+        <label for="title">Quiz Title:</label>
+        <div>
+        <input type="text" id="title" name="title" required><br><br>
+        </div>
+        <div id="question-answers">
+            <div>
+                <label for="question1">Question 1:</label>
+                <div>
+                <textarea type="text" cols="50" rows="3" id="question1" name="question1" required></textarea>
+                </div>
+                <label for="answer1">Correct Answer:</label>
+                <div>
+                    <textarea type="text" cols="50" rows="3" id="answer1" name="answer1" required></textarea>
+                </div>
+                <label for="options1">Options (comma separated):</label>
+                <div>
+                    <textarea type="text" cols="50" rows="3" id="options1" name="options1" required></textarea>
+                </div>
+            </div>
+        </div>
+        <div  style="margin-top: 20px;">
+            <button type="button" onclick="addQuestion()" class="home-button" style = "margin-left: 135px; ">Add another question</button>
+        </div>
+        <br>
+        <div style="margin-top: 20px;">
+        <a href="/"><button type="submit" class="home-button">Create a quiz</button></a>
+        </div>
+    </form>
+</div>
+<div>
+    <a href="/"><button type="submit" class="creation-button" style ="margin-left: 130px; ">Home</button></a>
+</div>
+    <script>
+        let questionCount = 1;
+        function addQuestion() {
+            questionCount++;
+            const container = document.createElement('div');
+            container.innerHTML = `
+                <label for="question${questionCount}">Question ${questionCount}:</label>
+                <input type="text" id="question${questionCount}" name="question${questionCount}" required><br>
+                <label for="answer${questionCount}">Correct Answer:</label>
+                <input type="text" id="answer${questionCount}" name="answer${questionCount}" required><br>
+                <label for="options${questionCount}">Options (comma separated):</label>
+                <input type="text" id="options${questionCount}" name="options${questionCount}" required><br>
+            `;
+            document.getElementById('question-answers').appendChild(container);
+        }
+    </script>
+</body>
+
+</html>
