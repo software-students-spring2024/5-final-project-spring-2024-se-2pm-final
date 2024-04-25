@@ -5,14 +5,19 @@
     <title>Quiz Home</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <style>
-        table, th, td {
+        table,
+        th,
+        td {
             border: 1px solid black;
             border-collapse: collapse;
         }
-        th, td {
+
+        th,
+        td {
             padding: 10px;
             text-align: left;
         }
+
         .click_edit:hover {
             cursor: pointer;
             background-color: lightgray;
@@ -24,13 +29,13 @@
 
 <body>
     <h1>Quiz App Homepage</h1>
-<div class="wrapper">
-    <ul class = "click_edit">
-        {% for quiz in quizzes %}
-        <li ><a href="{{ url_for('quiz', quiz_id=quiz._id) }}">{{ quiz.title }}</a></li>
-        {% endfor %}
-    </ul>
-</div>
+    <div class="wrapper">
+        <ul class="click_edit">
+            {% for quiz in quizzes %}
+            <li><a href="{{ url_for('quiz', quiz_id=quiz._id) }}">{{ quiz.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
 </body>
 
 </html>

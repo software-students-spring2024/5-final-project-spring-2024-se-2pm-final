@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Quiz</title>
+</head>
+
+<body>
+    <h1>Create a New Quiz</h1>
+    <form action="/create" method="POST">
+        <label for="title">Quiz Title:</label>
+        <input type="text" id="title" name="title" required><br><br>
+
+        <div id="question-answers">
+            <div>
+                <label for="question1">Question 1:</label>
+                <input type="text" id="question1" name="question1" required><br>
+                <label for="answer1">Correct Answer:</label>
+                <input type="text" id="answer1" name="answer1" required><br>
+                <label for="options1">Options (comma separated):</label>
+                <input type="text" id="options1" name="options1" required><br>
+            </div>
+        </div>
+        <button type="button" onclick="addQuestion()">Add another question</button><br><br>
+        <input type="submit" value="Create Quiz">
+    </form>
+
+    <script>
+        let questionCount = 1;
+        function addQuestion() {
+            questionCount++;
+            const container = document.createElement('div');
+            container.innerHTML = `
+                <label for="question${questionCount}">Question ${questionCount}:</label>
+                <input type="text" id="question${questionCount}" name="question${questionCount}" required><br>
+                <label for="answer${questionCount}">Correct Answer:</label>
+                <input type="text" id="answer${questionCount}" name="answer${questionCount}" required><br>
+                <label for="options${questionCount}">Options (comma separated):</label>
+                <input type="text" id="options${questionCount}" name="options${questionCount}" required><br>
+            `;
+            document.getElementById('question-answers').appendChild(container);
+        }
+    </script>
+</body>
+
+</html>
