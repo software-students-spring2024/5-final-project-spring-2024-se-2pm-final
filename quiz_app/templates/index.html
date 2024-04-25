@@ -3,10 +3,42 @@
 
 <head>
     <title>Quiz Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        .click_edit:hover {
+            cursor: pointer;
+            background-color: lightgray;
+            transition: all .4s ease;
+            -webkit-transition: all .4s ease;
+        }
+    </style>
 </head>
 
 <body>
     <h1>Quiz App Homepage</h1>
+    <div class="wrapper">
+        <ul>
+            {% for quiz in quizzes %}
+            <li class="click_edit"><a href="{{ url_for('quiz', quiz_id=quiz._id) }}">{{ quiz.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div>
+        <a href="/create"><button type="submit" class="creation-button">Create a quiz</button></a>
+    </div>
 </body>
 
 </html>

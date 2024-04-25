@@ -4,14 +4,19 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-pymongo = "*"
 flask = "*"
 python-dotenv = "*"
 certifi = "*"
 gunicorn = "*"
+black = "*"
+pylint = "*"
+pytest = "*"
+flask-login = "*"
+appdirs = "*"
+bson = "*"
+pymongo = "*"
 
 [dev-packages]
 
 [requires]
 python_version = "3.12"
-
