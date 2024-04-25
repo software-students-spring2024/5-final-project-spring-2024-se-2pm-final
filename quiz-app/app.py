@@ -22,7 +22,7 @@ except Exception as e:
      print(" * MongoDB connection error:", e)
 
 # home route. Displays a simple home page.
-@app.route('/')
+@app.route('/home')
 def home():
     quizzes = db.quizzes.find()
     return render_template('index.html', quizzes=quizzes)
@@ -42,6 +42,39 @@ def submit_quiz(quiz_id):
     correct_answers = db.quizzes.find_one({'_id': ObjectId(quiz_id)})['answers']
     score = sum(1 for question, answer in answers.items() if correct_answers.get(question) == answer)
     return render_template('result.html', score=score)
+
+# get route for creating a quiz
+@app.route('/create', methods=['GET'])
+def create_quiz():
+    return render_template('create.html')
+
+# get post for creating a quiz
+@app.route('/create', methods=['POST'])
+def add_quiz():
+    title = request.form.get('title')
+    questions = {}
+    answers = {}
+    
+    i = 1
+    while True:
+        question = request.form.get(f'question{i}')
+        answer = request.form.get(f'answer{i}')
+        options_str = request.form.get(f'options{i}')
+        if not question or not answer or not options_str:
+            break
+        options = [option.strip() for option in options_str.split(',')]
+        questions[question] = options
+        answers[question] = answer
+        i += 1
+
+    # insert new quiz
+    quiz = {
+        'title': title,
+        'questions': questions,
+        'answers': answers
+    }
+    db.quizzes.insert_one(quiz)
+    return redirect(url_for('home'))
 
 if __name__ == '__main__':
     app_port = os.getenv("FLASK_PORT", "3000")
