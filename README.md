@@ -16,5 +16,5 @@ for their students. Also, the users can answer those question to test their know
 
 1. Open the terminal and direct to the root directory of the project. Then, run the command below.
 ```
-python3 quiz-app/app.py 
+python3 quiz_app/app.py 
 ```
