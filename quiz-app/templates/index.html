@@ -30,11 +30,14 @@
 <body>
     <h1>Quiz App Homepage</h1>
     <div class="wrapper">
-        <ul class="click_edit">
+        <ul>
             {% for quiz in quizzes %}
-            <li><a href="{{ url_for('quiz', quiz_id=quiz._id) }}">{{ quiz.title }}</a></li>
+            <li class="click_edit"><a href="{{ url_for('quiz', quiz_id=quiz._id) }}">{{ quiz.title }}</a></li>
             {% endfor %}
         </ul>
+    </div>
+    <div>
+        <a href="/create"><button type="submit" class="creation-button">Create a quiz</button></a>
     </div>
 </body>
 

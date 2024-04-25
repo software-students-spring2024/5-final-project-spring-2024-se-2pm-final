@@ -22,7 +22,7 @@ except Exception as e:
      print(" * MongoDB connection error:", e)
 
 # home route. Displays a simple home page.
-@app.route('/home')
+@app.route('/')
 def home():
     quizzes = db.quizzes.find()
     return render_template('index.html', quizzes=quizzes)
