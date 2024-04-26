@@ -77,6 +77,6 @@ def add_quiz():
     return redirect(url_for('home'))
 
 if __name__ == '__main__':
-    app_port = os.getenv("FLASK_PORT", "3000")
-    app.run(debug=True, port=app_port)
+    app_port = os.getenv("FLASK_PORT", '3000')
+    app.run(debug=True, host='0.0.0.0', port=app_port)
 # python3 quiz_app/app.py to run
