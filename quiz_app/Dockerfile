@@ -7,7 +7,7 @@ WORKDIR /quiz_app
 COPY .env .env
 
 # install dependencies into the image - doing this first will speed up subsequent builds, as Docker will cache this step
-COPY requirements.txt ./
+COPY requirements.txt ./quiz_app/
 RUN pip3 install -r requirements.txt
 
 
