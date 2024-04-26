@@ -4,7 +4,7 @@ FROM python:3.10-slim-buster
 WORKDIR /quiz_app
 
 # Copy the .env file from the parent directory into the container
-COPY .env .env
+COPY quiz_app/.env .env
 
 # install dependencies into the image - doing this first will speed up subsequent builds, as Docker will cache this step
 COPY quiz_app/requirements.txt .
