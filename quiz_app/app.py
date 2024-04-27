@@ -24,12 +24,14 @@ except Exception as e:
 # home route. Displays a simple home page.
 @app.route('/')
 def home():
+    '''function to get to home page'''
     quizzes = db.quizzes.find()
     return render_template('index.html', quizzes=quizzes)
 
 # quiz route
 @app.route('/quiz/<quiz_id>')
 def quiz(quiz_id):
+    '''directs to the quiz that the user clicks on.'''
     # fetch quiz by id
     quiz = db.quizzes.find_one({'_id': ObjectId(quiz_id)})
     return render_template('quiz.html', quiz=quiz)
@@ -37,6 +39,7 @@ def quiz(quiz_id):
 # submit route
 @app.route('/submit_quiz/<quiz_id>', methods=['POST'])
 def submit_quiz(quiz_id):
+    '''function to submit the quiz currently being taken'''
     # counter correct answers and present score
     answers = request.form.to_dict()
     correct_answers = db.quizzes.find_one({'_id': ObjectId(quiz_id)})['answers']
@@ -46,11 +49,13 @@ def submit_quiz(quiz_id):
 # get route for creating a quiz
 @app.route('/create', methods=['GET'])
 def create_quiz():
+    '''function to create a new quiz'''
     return render_template('create.html')
 
 # get post for creating a quiz
 @app.route('/create', methods=['POST'])
 def add_quiz():
+    '''function to post the quiz'''
     title = request.form.get('title')
     questions = {}
     answers = {}
