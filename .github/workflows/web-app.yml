@@ -41,5 +41,27 @@ jobs:
           docker-compose up -d --build
           docker tag quiz_app_final:latest ${{ secrets.DOCKER_USERNAME }}/quiz_app_final:latest
           docker push ${{ secrets.DOCKER_USERNAME }}/quiz_app_final:latest
-          
-      
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Deploy to DigitalOcean
+        env:
+          DIGITALOCEAN_CLI_TOKEN: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
+        run: |
+          doctl apps create \
+            --spec <(echo 'name: se2pm4_final
+            services:
+              - name: web
+                image:
+                  registry: dockerhub
+                  username: ${{ secrets.DOCKER_USERNAME }}
+                  name: quiz_app_final
+                  tag: latest
+                environment_slug: python
+                instance_count: 1
+                http_port: 3000
+                routes:
+                  - path: /')
