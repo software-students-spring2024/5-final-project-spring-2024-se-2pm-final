@@ -53,17 +53,16 @@ jobs:
         run: |
           sudo snap install doctl
           doctl auth init --access-token ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
-          doctl apps create \
-            --spec <(echo 'name: se2pm4_final
-            services:
-              - name: web
-                image:
-                  registry: dockerhub
-                  username: ${{ secrets.DOCKER_USERNAME }}
-                  name: quiz_app_final
-                  tag: latest
-                environment_slug: python
-                instance_count: 1
-                http_port: 3000
-                routes:
-                  - path: /')
+          doctl apps create --spec <(echo 'name: my-app
+          services:
+          - name: web
+            image:
+              registry: dockerhub
+              username: your-dockerhub-username
+              name: your-image-name
+              tag: your-image-tag
+            environment_slug: python
+            instance_count: 1
+            http_port: 3000
+            routes:
+              - path: /')
