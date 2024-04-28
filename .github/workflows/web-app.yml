@@ -52,6 +52,7 @@ jobs:
           DIGITALOCEAN_CLI_TOKEN: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
         run: |
           sudo snap install doctl
+          doctl auth init --access-token ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
           doctl apps create \
             --spec <(echo 'name: se2pm4_final
             services:
