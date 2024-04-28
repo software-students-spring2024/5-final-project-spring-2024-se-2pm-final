@@ -3,11 +3,6 @@ FROM python:3.10-slim-buster
 # Set the working directory in the image
 WORKDIR /quiz_app
 
-RUN ls -l
-
-# Copy the .env file from the parent directory into the container
-COPY .env .
-
 # install dependencies into the image - doing this first will speed up subsequent builds, as Docker will cache this step
 COPY requirements.txt .
 RUN pip3 install -r requirements.txt

@@ -38,7 +38,6 @@ jobs:
 
       - name: Build and push Docker image
         run: |
-          cd quiz_app
-          docker build -t quiz_app_image .
+          docker-compose up -d --build
           
       
