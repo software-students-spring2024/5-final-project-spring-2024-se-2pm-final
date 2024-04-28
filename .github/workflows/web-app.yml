@@ -47,11 +47,11 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
       - name: Deploy to DigitalOcean
         env:
           DIGITALOCEAN_CLI_TOKEN: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
         run: |
+          pip install doctl
           doctl apps create \
             --spec <(echo 'name: se2pm4_final
             services:
