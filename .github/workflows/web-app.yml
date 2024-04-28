@@ -39,6 +39,6 @@ jobs:
       - name: Build and push Docker image
         run: |
           cd quiz_app
-          docker build -t quiz_app_image
+          docker build -t quiz_app_image .
           docker push minjae07206/quiz_app_image:latest
       
