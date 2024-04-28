@@ -5,6 +5,7 @@ services:
     build:
       context: ./quiz_app
       dockerfile: Dockerfile
+      image: quiz_app_final
     ports:
       - "3000:3000"
     environment:
