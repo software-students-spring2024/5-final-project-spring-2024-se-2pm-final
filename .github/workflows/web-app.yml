@@ -51,7 +51,7 @@ jobs:
         env:
           DIGITALOCEAN_CLI_TOKEN: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
         run: |
-          pip install doctl
+          sudo snap install doctl
           doctl apps create \
             --spec <(echo 'name: se2pm4_final
             services:
