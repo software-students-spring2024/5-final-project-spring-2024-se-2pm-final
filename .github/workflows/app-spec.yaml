@@ -1,5 +1,4 @@
-name: Digital Ocean CI/CD
-
+name: my-app
 services:
   - name: web
     image:
