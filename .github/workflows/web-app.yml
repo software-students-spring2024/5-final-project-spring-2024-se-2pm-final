@@ -38,7 +38,7 @@ jobs:
 
       - name: Build and push Docker image
         run: |
-          cd ../..  # Navigate up two levels from .github/workflows
-          docker build -t quiz_app_image -f quiz_app/Dockerfile ./quiz_app
+          cd quiz_app
+          docker build -t quiz_app_image -f quiz_app/Dockerfile .
           docker push minjae07206/quiz_app_image:latest
       
