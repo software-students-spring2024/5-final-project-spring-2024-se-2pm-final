@@ -38,6 +38,6 @@ jobs:
 
       - name: Build and push Docker image
         run: |
-          docker build -t quiz_app -f quiz_app/Dockerfile .
+          docker build -t quiz_app_image -f quiz_app/Dockerfile ../quiz_app
           docker push minjae07206/quiz_app_image:latest
       
