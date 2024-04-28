@@ -53,7 +53,8 @@ jobs:
         run: |
           sudo snap install doctl
           doctl auth init --access-token ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
-          doctl apps create --spec <(echo 'name: my-app
+          doctl apps create --spec <(echo '
+          name: my-app
           services:
           - name: web
             image:
