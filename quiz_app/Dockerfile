@@ -3,6 +3,8 @@ FROM python:3.10-slim-buster
 # Set the working directory in the image
 WORKDIR /quiz_app
 
+RUN ls -l
+
 # Copy the .env file from the parent directory into the container
 COPY .env .
 
