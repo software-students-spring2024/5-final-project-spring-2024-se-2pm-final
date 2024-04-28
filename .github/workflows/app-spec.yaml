@@ -1,0 +1,14 @@
+name: Digital Ocean CI/CD
+
+services:
+  - name: web
+    image:
+      registry: dockerhub
+      username: ${{ secrets.DOCKER_USERNAME }}
+      name: quiz_app_final
+      tag: latest
+    environment_slug: python
+    instance_count: 1
+    http_port: 3000
+    routes:
+      - path: /
