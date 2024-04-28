@@ -17,6 +17,7 @@ exceptiongroup = "*"
 tomli = "*"
 dill = "*"
 pymongo = "*"
+doctl = "*"
 
 [dev-packages]
 
