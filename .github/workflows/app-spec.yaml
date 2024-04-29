@@ -1,6 +1,7 @@
 name: my-app
+region: nyc
 services:
-  - name: web
+  - name: web-service
     image:
       registry: dockerhub
       username: ${{ secrets.DOCKER_USERNAME }}
