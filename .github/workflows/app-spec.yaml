@@ -1,18 +1,19 @@
-name: se2pm-final
+name: my-app
 region: nyc
 
 services:
   - name: web-service
     image:
-      registry_type: DOCKER_HUB
       registry: dockerhub
       username: ${{ secrets.DOCKER_USERNAME }}
       name: quiz_app_final
       tag: latest
+    environment_slug: python
     instance_count: 1
     http_port: 3000
     routes:
       - path: /
+
 
 
   
