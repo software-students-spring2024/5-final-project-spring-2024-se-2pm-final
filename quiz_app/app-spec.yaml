@@ -4,7 +4,7 @@ services:
 - name: web-service
   image:
     registry_type: DOCKER_HUB
-    registry: dockerhub
+    registry: hub.docker.com
     repository: minjae07206/quiz_app_final
     tag: latest
   environment_slug: python
