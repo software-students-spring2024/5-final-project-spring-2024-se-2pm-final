@@ -1,13 +1,13 @@
 name: se2pm_final
 region: nyc
 services:
-- name: quiz_app
+- name: quizapp
   image:
+    name: quizappfinal
     registry_type: DOCKER_HUB
     registry: dockerhub
     repository: minjae07206/quiz_app_final
     tag: latest
-  
   instance_count: 1
   http_port: 3000
   routes:
