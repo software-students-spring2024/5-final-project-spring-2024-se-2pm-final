@@ -2,14 +2,13 @@ name: se2pm-final
 region: nyc
 
 services:
-  - name: web-service
-    image:
-      registry: dockerhub
-      username: ${{ secrets.DOCKER_USERNAME }}
-      name: quiz_app_final
-      tag: latest
-    instance_count: 1
-    http_port: 3000
-    routes:
-      - path: /
+  image:
+    registry: dockerhub
+    username: ${{ secrets.DOCKER_USERNAME }}
+    name: quiz_app_final
+    tag: latest
+  instance_count: 1
+  http_port: 3000
+  routes:
+    - path: /
 
