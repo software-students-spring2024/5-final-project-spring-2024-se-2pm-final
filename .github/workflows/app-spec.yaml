@@ -1,2 +1,6 @@
-name: my-app
+name: se2pm-final
 region: nyc
+
+services:
+  name: web-service
+
