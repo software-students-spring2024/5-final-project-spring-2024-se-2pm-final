@@ -2,18 +2,17 @@ name: my-app
 region: nyc
 
 services:
-  - environment_slug: python
-    image:
-      registry: dockerhub
-      username: ${{ secrets.DOCKER_USERNAME }}
-      name: quiz_app_final
-      tag: latest
-    name: web-service
-    instance_count: 1
-    http_port: 3000
-    routes:
-      - path: /
-
+- environment_slug: python
+  image:
+    registry: dockerhub
+    username: ${{ secrets.DOCKER_USERNAME }}
+    name: quiz_app_final
+    tag: latest
+  name: web-service
+  instance_count: 1
+  http_port: 3000
+  routes:
+    - path: /
 
 
   
