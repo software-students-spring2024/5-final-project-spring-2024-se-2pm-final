@@ -2,7 +2,7 @@ name: se2pm-final
 region: nyc
 
 services:
-  name: web-service
+- name: web-service
   image:
     registry: dockerhub
     username: ${{ secrets.DOCKER_USERNAME }}
