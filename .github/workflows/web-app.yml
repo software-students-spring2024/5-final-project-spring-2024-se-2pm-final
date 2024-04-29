@@ -53,4 +53,4 @@ jobs:
         run: |
           sudo snap install doctl
           doctl auth init --access-token ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
-          doctl apps create --spec ../.github/workflows/app-spec.yaml
+          doctl apps create --spec .github/workflows/app-spec.yaml
