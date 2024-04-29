@@ -2,7 +2,7 @@ name: se2pm-final
 region: nyc
 
 services:
-- name: web-service
+- environment_slug: python
   image:
     registry: dockerhub
     username: ${{ secrets.DOCKER_USERNAME }}
