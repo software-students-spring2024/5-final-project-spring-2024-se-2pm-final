@@ -8,7 +8,7 @@ services:
     username: ${{ secrets.DOCKER_USERNAME }}
     name: quiz_app_final
     tag: latest
-  name: website
+  name: web-service
   instance_count: 1
   http_port: 3000
   routes:
