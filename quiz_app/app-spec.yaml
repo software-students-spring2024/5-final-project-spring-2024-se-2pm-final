@@ -3,8 +3,8 @@ region: nyc
 services:
 - name: web-service
   image:
+    registry_type: DOCKER_HUB
     registry: dockerhub
-    username: ${{ secrets.DOCKER_USERNAME }}
     tag: latest
   environment_slug: python
   http_port: 3000
