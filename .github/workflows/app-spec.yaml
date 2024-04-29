@@ -1,10 +1,10 @@
 name: se2pm-final
 region: nyc
-
 services:
 - environment_slug: python
   image:
-    registry: dockerhub
+    registry_type: dockerhub
+    repository: quiz_app_final
     username: ${{ secrets.DOCKER_USERNAME }}
     name: quiz_app_final
     tag: latest
