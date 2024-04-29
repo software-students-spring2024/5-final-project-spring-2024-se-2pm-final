@@ -1,12 +1,12 @@
 services:
-- name: web-service
-  image:
+- image:
     registry_type: DOCKER_HUB
     registry: dockerhub
     repository: minjae07206/quiz_app_final
     username: ${{ secrets.DOCKER_USERNAME }}
     name: quiz_app_final
     tag: latest
+  name: web-service
   instance_count: 1
   http_port: 3000
   routes:
