@@ -3,4 +3,9 @@ region: nyc
 
 services:
   name: web-service
+  image:
+    registry: dockerhub
+    username: ${{ secrets.DOCKER_USERNAME }}
+    name: quiz_app_final
+    tag: latest
 
