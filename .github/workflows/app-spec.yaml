@@ -1,7 +1,7 @@
 name: se2pm_final
 region: nyc
 services:
-- name: quizapp
+  -name: quizapp
   image:
     name: quizappfinal
     registry_type: DOCKER_HUB
