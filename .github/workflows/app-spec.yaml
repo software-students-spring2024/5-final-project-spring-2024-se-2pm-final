@@ -6,6 +6,7 @@ services:
     registry: dockerhub
     repository: minjae07206/quiz_app_final
     tag: latest
+  name: quiz_app
   instance_count: 1
   http_port: 3000
   routes:
