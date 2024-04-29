@@ -5,6 +5,7 @@ services:
   image:
     registry_type: DOCKER_HUB
     registry: dockerhub
+    repository: minjae07206/quiz_app_final
     tag: latest
   environment_slug: python
   http_port: 3000
