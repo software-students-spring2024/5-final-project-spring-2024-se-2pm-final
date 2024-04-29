@@ -1,4 +1,4 @@
-name: my-app
+name: quiz_app
 region: nyc
 
 services:
@@ -8,7 +8,7 @@ services:
     username: ${{ secrets.DOCKER_USERNAME }}
     name: quiz_app_final
     tag: latest
-  name: web-service
+  name: website
   instance_count: 1
   http_port: 3000
   routes:
