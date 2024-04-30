@@ -25,7 +25,7 @@ services:
     - key: FLASK_APP
       scope: RUN_AND_BUILD_TIME
       type: GENERAL
-      value: ${FLASK_APP}
+      value: app.py
     - key: GITHUB_REPO
       scope: RUN_AND_BUILD_TIME
       type: GENERAL
