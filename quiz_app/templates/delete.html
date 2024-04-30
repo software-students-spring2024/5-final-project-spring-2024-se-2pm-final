@@ -2,18 +2,18 @@
 <html>
 
 <head>
-    <title>Delete quizz</title>
+    <title>Delete quiz</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 
 <body>
-    <h3>Select quizz to delete</h3>
+    <h3>Select quiz to delete</h3>
     <form action = "/delete" method = "POST">
       <div class="wrapper">
         <ul>
             {% for quiz in quizzes %}
-            <li class="click_edit" >
-                <input type="checkbox" name="quiz_ids[]" value="{{ quiz._id }}"></input>
+            <li class="click_edit">
+                <input type="checkbox" name="quiz_ids[]" value="{{ quiz._id }}">
                {{ quiz.title }}</li>
             {% endfor %}
         </ul>
