@@ -17,11 +17,11 @@ envs:
   - key: MONGO_DBNAME
     scope: RUN_AND_BUILD_TIME
     type: GENERAL
-    value: ${MONGO_DBNAME}
+    value: $MONGO_DBNAME
   - key: MONGO_URI
     scope: RUN_AND_BUILD_TIME
     type: GENERAL
-    value: ${MONGO_URI}
+    value: $MONGO_URI
   - key: FLASK_APP
     scope: RUN_AND_BUILD_TIME
     type: GENERAL
@@ -29,7 +29,7 @@ envs:
   - key: GITHUB_REPO
     scope: RUN_AND_BUILD_TIME
     type: GENERAL
-    value: ${GITHUB_REPO}
+    value: $GITHUB_REPO
 
   
 
