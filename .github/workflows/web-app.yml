@@ -53,4 +53,4 @@ jobs:
         run: |
           sudo snap install doctl
           doctl auth init --access-token ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
-          doctl apps update --spec quiz_app/app-spec.yaml
+          doctl apps update d173d7b0-60cf-4cb4-b0b5-b216797d03f1 --spec quiz_app/app-spec.yaml
