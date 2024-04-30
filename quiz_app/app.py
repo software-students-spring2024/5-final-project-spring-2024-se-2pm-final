@@ -81,6 +81,27 @@ def add_quiz():
     db.quizzes.insert_one(quiz)
     return redirect(url_for('home'))
 
+@app.route("/delete", methods=['GET', 'POST'])
+def delete():
+    # POST handler
+    if request.method == 'POST':
+
+        # get taskId
+        quiz_ids = request.form.getlist('quiz_ids[]')
+
+        # delete
+        if quiz_ids:
+            for quiz_id in quiz_ids:
+                db.quizzes.delete_one({'_id': ObjectId(quiz_id)})
+
+        # refresh
+        return redirect(url_for('delete'))
+
+    # display delete template
+    quizzes = list(db.quizzes.find())
+    return render_template('delete.html', quizzes =quizzes)
+
+
 if __name__ == '__main__':
     app_port = os.getenv("FLASK_PORT", '3000')
     app.run(debug=True, host='0.0.0.0', port=app_port)

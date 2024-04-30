@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Delete quizz</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body>
+    <h3>Select quizz to delete</h3>
+    <form action = "/delete" method = "POST">
+      <div class="wrapper">
+        <ul>
+            {% for quiz in quizzes %}
+            <li class="click_edit" >
+                <input type="checkbox" name="quiz_ids[]" value="{{ quiz._id }}" required=""
+                oninvalid="this.setCustomValidity('Please Check one of the box(es) to delete or exit through Home button')"
+                oninput="setCustomValidity('')"></input>
+               {{ quiz.title }}</li>
+            {% endfor %}
+        </ul>
+    </div> 
+    <div>
+       <button type="submit" class="delete-button" style ="margin-left: 150px;" method = "POST">Delete</button>
+    </div>
+</form>
+    <br>
+    <br>
+    <div>
+        <a href="/"><button class="creation-button" style ="margin-left: 65px; ">Home</button></a>
+    </div>
+</body>
+
+</html>

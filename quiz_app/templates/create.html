@@ -51,11 +51,11 @@
             const container = document.createElement('div');
             container.innerHTML = `
                 <label for="question${questionCount}">Question ${questionCount}:</label>
-                <input type="text" id="question${questionCount}" name="question${questionCount}" required><br>
+                <textarea type="text" cols="50" rows="3"  id="question${questionCount}" name="question${questionCount}"  required></textarea><br>
                 <label for="answer${questionCount}">Correct Answer:</label>
-                <input type="text" id="answer${questionCount}" name="answer${questionCount}" required><br>
+                <textarea type="text" cols="50" rows="3"  id="answer${questionCount}" name="answer${questionCount}" required></textarea><br>
                 <label for="options${questionCount}">Options (comma separated):</label>
-                <input type="text" id="options${questionCount}" name="options${questionCount}" required><br>
+                <textarea type="text" cols="50" rows="3"  id="options${questionCount}" name="options${questionCount}" required></textarea><br>
             `;
             document.getElementById('question-answers').appendChild(container);
         }
