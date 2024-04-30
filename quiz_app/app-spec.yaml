@@ -13,7 +13,23 @@ services:
     - path: /
   instance_size_slug: basic-xxs
   instance_count: 1
-
+envs:
+  - key: MONGO_DBNAME
+    scope: RUN_AND_BUILD_TIME
+    type: GENERAL
+    value: ${{MONGO_DBNAME}}
+  - key: MONGO_URI
+    scope: RUN_AND_BUILD_TIME
+    type: GENERAL
+    value: ${MONGO_URI}
+  - key: FLASK_APP
+    scope: RUN_AND_BUILD_TIME
+    type: GENERAL
+    value: app.py
+  - key: GITHUB_REPO
+    scope: RUN_AND_BUILD_TIME
+    type: GENERAL
+    value: ${GITHUB_REPO}
 
   
 
