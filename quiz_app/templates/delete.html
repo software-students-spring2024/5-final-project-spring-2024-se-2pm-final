@@ -12,9 +12,10 @@
       <div class="wrapper">
         <ul>
             {% for quiz in quizzes %}
-            <li class="click_edit">
-                <input type="checkbox" name="quiz_ids[]" value="{{ quiz._id }}">
-               {{ quiz.title }}</li>
+            <li class="click_edit" >
+                <input type="checkbox" name="quiz_ids[]" value="{{ quiz._id }}" required=""
+                oninvalid="this.setCustomValidity('Please Check one of the box(es) to delete or exit through Home button')"
+                oninput="setCustomValidity('')"></input>
             {% endfor %}
         </ul>
     </div> 

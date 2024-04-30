@@ -101,6 +101,15 @@ def delete():
     quizzes = list(db.quizzes.find())
     return render_template('delete.html', quizzes =quizzes)
 
+@app.route("/search",  methods=['GET', 'POST'])
+def search():
+    query = request.form.get('query')
+    results = []
+    if query:
+        title_results = list(db.quizzes.find(
+            {"title": {"$regex": query, "$options": "i"}}))
+        results = title_results
+    return render_template("search.html", results=results)
 
 if __name__ == '__main__':
     app_port = os.getenv("FLASK_PORT", '3000')

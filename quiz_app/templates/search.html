@@ -31,25 +31,14 @@
     <h1>Quiz App Homepage</h1>
     <div class="wrapper">
         <ul>
-            {% for quiz in quizzes %}
+            {% for quiz in results %}
             <li class="click_edit"><a href="{{ url_for('quiz', quiz_id=quiz._id) }}">{{ quiz.title }}</a></li>
             {% endfor %}
         </ul>
     </div>
     <div>
-        <a href="/create"><button type="submit" class="creation-button">Create a quiz</button></a>
+        <a href="/"><button class="creation-button" style ="margin-left: 65px; ">Home</button></a>
     </div>
-    <br>
-    <br>
-    <div>
-        <a href="/delete"><button type="submit" class="delete-button">Delete quizz(es)</button></a>
-    </div>
-    <form action="/search" method="POST">
-        <div class="wrapper">
-            <input type="text" name="query" placeholder="Search quiz title..."  class="search-input"></input>
-            <button type="submit" class="search-button" >Search</button>
-        </div>
-    </form>
 </body>
 
 </html>
