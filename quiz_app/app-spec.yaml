@@ -17,11 +17,11 @@ envs:
   - key: MONGO_DBNAME
     scope: RUN_AND_BUILD_TIME
     type: GENERAL
-    value: $MONGO_DBNAME
+    value: Cluster0
   - key: MONGO_URI
     scope: RUN_AND_BUILD_TIME
     type: GENERAL
-    value: $MONGO_URI
+    value: "mongodb+srv://yl7408:David205@cluster0.griovdi.mongodb.net/?retryWrites=true&w=majority"
   - key: FLASK_APP
     scope: RUN_AND_BUILD_TIME
     type: GENERAL
@@ -29,7 +29,7 @@ envs:
   - key: GITHUB_REPO
     scope: RUN_AND_BUILD_TIME
     type: GENERAL
-    value: $GITHUB_REPO
+    value: https://github.com/software-students-spring2024/5-final-project-spring-2024-se-2pm-final
 
   
 
