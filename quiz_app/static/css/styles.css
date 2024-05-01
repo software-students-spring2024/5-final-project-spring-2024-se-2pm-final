@@ -133,7 +133,7 @@ header .icons span:hover {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-left: 150px; 
+    margin-left: 175px; 
     text-align: center;
     font-size: 15px;
     float: left;
@@ -142,7 +142,6 @@ header .icons span:hover {
 .submission-event-button,
 .another-button:hover {
     padding: 10px 20px;
-    margin-left: 10px;
     background-color: white;
     color: black;
     border: none;
@@ -150,7 +149,7 @@ header .icons span:hover {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-left: 150px; 
+    margin-left: 175px; 
     text-align: center;
     font-size: 15px;
     float: left;
