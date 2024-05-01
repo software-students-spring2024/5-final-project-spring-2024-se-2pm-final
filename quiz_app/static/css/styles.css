@@ -32,8 +32,8 @@ body {
     margin-top: 10px;
     width: 450px;
     background: #fff;
-    border-radius: 10px;
-    padding: 20px;
+    border-radius: 5px;
+    padding: 21px;
     margin-bottom: 20px; /* Add spacing between calendar and todo list */
 }
 
@@ -125,7 +125,6 @@ header .icons span:hover {
     margin-left: auto;
     margin-right: auto; 
     padding: 10px 20px;
-    margin-left: 10px;
     max-width: 200px; 
     background-color: black;
     color: white;
@@ -134,7 +133,7 @@ header .icons span:hover {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-left: 100px; 
+    margin-left: 150px; 
     text-align: center;
     font-size: 15px;
     float: left;
@@ -151,7 +150,7 @@ header .icons span:hover {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-left: 100px; 
+    margin-left: 150px; 
     text-align: center;
     font-size: 15px;
     float: left;
@@ -229,7 +228,7 @@ header .icons span:hover {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-left: 150px; 
+    margin-left: 175px; 
     text-align: center;
     font-size: 10px;
     float: left;
@@ -251,7 +250,7 @@ header .icons span:hover {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-left: 150px; 
+    margin-left: 175px; 
     text-align: center;
     font-size: 10px;
     float: left;
