@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  quiz-app:
+    build:
+      context: ./quiz_app
+      dockerfile: Dockerfile
+    image: quiz_app_final
+    ports:
+      - "3000:3000"
+    environment:
+      - MONGO_DBNAME=${MONGO_DBNAME}
+      - MONGO_URI=${MONGO_URI}
+      - FLASK_APP=${FLASK_APP}
+      - FLASK_ENV=${FLASK_ENV}
+      - FLASK_PORT=${FLASK_PORT}
+      - GITHUB_REPO=${GITHUB_REPO}

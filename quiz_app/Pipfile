@@ -13,12 +13,12 @@ pylint = "*"
 pytest = "*"
 flask-login = "*"
 appdirs = "*"
-bson = "*"
-pymongo = "*"
 exceptiongroup = "*"
 tomli = "*"
 dill = "*"
 pytest-cov = "*"
+pymongo = "*"
+doctl = "*"
 
 [dev-packages]
 
