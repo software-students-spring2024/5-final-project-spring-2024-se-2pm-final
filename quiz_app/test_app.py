@@ -95,20 +95,22 @@ def test_create_submit_search_delete_quiz(test_client):
      # Search Quiz
     response = test_client.post(
         "/search",
-        query={
+        data={
             "title": "Test",
         },
     )
     assert response.status_code == 200  # Redirects to search route
       # Search to delete Quiz
     response = test_client.post(
-        "/searchdeklete",
-        query={
+        "/searchdelete",
+        data={
             "title": "Test",
         },
     )
     assert response.status_code == 200  # Redirects to search route
-    
+    # Search and Delete Quiz
+    response = test_client.post("/searchdelete", data={"quiz_ids[]": [str(created_quiz_id)]})
+    assert response.status_code == 302  # Redirects to delete route
     # Get created quiz id
     created_quiz_id = db.quizzes.find_one({"title": "Test Quiz"})["_id"]
 
