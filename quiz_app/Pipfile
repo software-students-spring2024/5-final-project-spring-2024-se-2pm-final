@@ -18,6 +18,7 @@ pymongo = "*"
 exceptiongroup = "*"
 tomli = "*"
 dill = "*"
+pytest-cov = "*"
 
 [dev-packages]
 
