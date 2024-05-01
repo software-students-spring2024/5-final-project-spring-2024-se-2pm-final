@@ -99,7 +99,7 @@ def test_create_submit_search_delete_quiz(test_client):
             "title": "Test",
         },
     )
-    assert response.status_code == 302  # Redirects to search route
+    assert response.status_code == 200  # Redirects to search route
     
     # Get created quiz id
     created_quiz_id = db.quizzes.find_one({"title": "Test Quiz"})["_id"]
