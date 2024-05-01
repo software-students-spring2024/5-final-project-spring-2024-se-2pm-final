@@ -82,17 +82,6 @@ def test_search_route(test_client):
     )
     assert response.status_code == 200
     
-def test_search_delete_route(test_client):
-    """
-    Test search and delete route
-    """
-    response = test_client.post(
-        "/search",
-        data={
-            "title": "Test",
-        },
-    )
-    assert response.status_code == 200
 
 def test_create_submit_delete_quiz(test_client):
     """
