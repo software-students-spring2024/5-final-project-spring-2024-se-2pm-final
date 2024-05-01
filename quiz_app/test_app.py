@@ -83,7 +83,7 @@ def test_search_route(test_client):
     assert response.status_code == 200
     
 
-def test_create_submit_search_delete_quiz(test_client):
+def test_create_submit_delete_quiz(test_client):
     """
     Test create, submit, and delete quiz
     """
