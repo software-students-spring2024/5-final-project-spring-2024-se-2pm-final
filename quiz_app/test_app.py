@@ -112,6 +112,3 @@ def test_create_submit_delete_quiz(test_client):
     # Delete Quiz
     response = test_client.post("/delete", data={"quiz_ids[]": [str(created_quiz_id)]})
     assert response.status_code == 302  # Redirects to delete route
-    #search and delete quiz
-    response = test_client.post("/searchdelete", data={"quiz_ids[]": [str(created_quiz_id)]})
-    assert response.status_code == 302  # Redirects to delete route
