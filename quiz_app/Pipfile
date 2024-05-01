@@ -16,6 +16,7 @@ appdirs = "*"
 exceptiongroup = "*"
 tomli = "*"
 dill = "*"
+pytest-cov = "*"
 pymongo = "*"
 doctl = "*"
 

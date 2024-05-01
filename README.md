@@ -1,7 +1,7 @@
 [![Web-app CI](https://github.com/software-students-spring2024/5-final-project-spring-2024-se-2pm-final/actions/workflows/web-app.yml/badge.svg)](https://github.com/software-students-spring2024/5-final-project-spring-2024-se-2pm-final/actions/workflows/web-app.yml)
 # Final Project
 
-We aim to design and produce a quiz-making app targeted to education market similar to that of quizzlet. Our service will allow the users to make multiple-chioce quizzes
+We aim to design and produce a quiz-making app targeted to education market similar to that of quizzlet. Our service will allow the users to make and delete multiple-chioce quizzes
 for their students. Also, the users can answer those question to test their knowledge for the subject.
 
 ## Teammates participating in this project
@@ -11,10 +11,18 @@ for their students. Also, the users can answer those question to test their know
 3. Minjae Lee: [Github profile](https://github.com/minjae07206)
 4. Yiwei Luo: [Github profile](https://github.com/yl7408)
 
-## Instructions to run this project
-### Running the project in 3 docker containers
+## Docker image hosted on Dockerhub
 
-1. Open the terminal and direct to the root directory of the project. Then, run the command below.
-```
-python3 quiz-app/app.py 
-```
+https://hub.docker.com/r/minjae07206/quiz_app_final
+
+## Instructions to run this project
+
+To just open the website and use it, here is the [Link](https://quiz-app-zdp4b.ondigitalocean.app/)
+
+If you want to contribute, you can make a pull request. Once the user makes a pull request, the following things happen:
+
+1. A Docker Image is built from Dockerfile and the image is pushed(uploaded) to Dockerhub.
+
+2. This Docker Image is used to download dependencies and deploys to Digital Ocean.
+
+3. In order to contribute, you will need .env file and app-spec.yaml file. These files are given to stakeholders. .env file is for carrying information about the database, and app-spec.yaml is the configuration for deploying on Digital Ocean.
