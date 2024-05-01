@@ -19,10 +19,6 @@ services:
     scope: RUN_AND_BUILD_TIME
     type: GENERAL
     value: Cluser0
-  - key: MONGO_URI
-    scope: RUN_AND_BUILD_TIME
-    type: SECRET
-    value: "mongodb+srv://yl7408:David205@cluster0.griovdi.mongodb.net/?retryWrites=true&w=majority"
   - key: FLASK_APP
     scope: RUN_AND_BUILD_TIME
     type: GENERAL
