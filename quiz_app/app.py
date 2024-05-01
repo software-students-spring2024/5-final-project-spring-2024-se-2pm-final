@@ -43,7 +43,10 @@ def submit_quiz(quiz_id):
     # counter correct answers and present score
     answers = request.form.to_dict()
     correct_answers = db.quizzes.find_one({'_id': ObjectId(quiz_id)})['answers']
-    score = sum(1 for question, answer in answers.items() if correct_answers.get(question) == answer)
+    try:
+      score = 100 * round(sum(1 for question, answer in answers.items() if correct_answers.get(question) == answer)/len(correct_answers),2)
+    except:
+        score =0.0
     return render_template('result.html', score=score)
 
 # get route for creating a quiz

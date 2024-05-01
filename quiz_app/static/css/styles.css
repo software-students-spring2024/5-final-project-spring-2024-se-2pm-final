@@ -121,6 +121,7 @@ header .icons span:hover {
 
 .submission-event-button,
 .another-button {
+    display: flex;
     padding: 10px 20px;
     margin-left: 10px;
     background-color: black;
@@ -138,6 +139,7 @@ header .icons span:hover {
 }
 .submission-event-button,
 .another-button:hover {
+    display: flex;
     padding: 10px 20px;
     margin-left: 10px;
     background-color: white;
