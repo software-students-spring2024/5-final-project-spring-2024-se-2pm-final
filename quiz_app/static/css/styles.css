@@ -18,7 +18,18 @@ body {
 }
 
 .wrapper {
+    display: flex;
     margin-top: 50px;
+    width: 450px;
+    align-items: center;
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px; /* Add spacing between calendar and todo list */
+}
+.wrapper1 {
+    display: flex;
+    margin-top: 10px;
     width: 450px;
     background: #fff;
     border-radius: 10px;
@@ -111,8 +122,11 @@ header .icons span:hover {
 
 .submission-event-button,
 .another-button {
+    margin-left: auto;
+    margin-right: auto; 
     padding: 10px 20px;
     margin-left: 10px;
+    max-width: 200px; 
     background-color: black;
     color: white;
     border: none;
@@ -120,7 +134,7 @@ header .icons span:hover {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-left: 150px; 
+    margin-left: 100px; 
     text-align: center;
     font-size: 15px;
     float: left;
@@ -137,7 +151,7 @@ header .icons span:hover {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-left: 150px; 
+    margin-left: 100px; 
     text-align: center;
     font-size: 15px;
     float: left;
@@ -192,6 +206,73 @@ header .icons span:hover {
     margin-right: 120px;
 }
 .home-button:hover {
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    border: none;
+    font-family:"Times New Roman", Times, serif;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 250px; 
+    text-align: center;
+    font-size: 10px;
+    float: left;
+    margin-right: 120px;
+}
+.search-button {
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    font-family:"Times New Roman", Times, serif;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 150px; 
+    text-align: center;
+    font-size: 10px;
+    float: left;
+    margin-right: 120px;
+}
+.search-input {
+    height: 25px;
+    width: 1000px;
+    flex: 1;
+    margin-right: 10px; 
+}
+.search-button:hover {
+    padding: 10px 20px;
+    margin-left: 10px;
+    background-color: white;
+    color: black;
+    border: none;
+    font-family:"Times New Roman", Times, serif;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 150px; 
+    text-align: center;
+    font-size: 10px;
+    float: left;
+    margin-right: 120px;
+}
+.sd-button {
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    font-family:"Times New Roman", Times, serif;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 150px; 
+    text-align: center;
+    font-size: 10px;
+    float: left;
+    margin-right: 120px;
+}
+.sd-button:hover {
     padding: 10px 20px;
     margin-left: 10px;
     background-color: white;

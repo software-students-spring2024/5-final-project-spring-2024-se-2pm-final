@@ -43,7 +43,10 @@ def submit_quiz(quiz_id):
     # counter correct answers and present score
     answers = request.form.to_dict()
     correct_answers = db.quizzes.find_one({'_id': ObjectId(quiz_id)})['answers']
-    score = sum(1 for question, answer in answers.items() if correct_answers.get(question) == answer)
+    try:
+      score = 100 * round(sum(1 for question, answer in answers.items() if correct_answers.get(question) == answer)/len(correct_answers),2)
+    except:
+        score =0.0
     return render_template('result.html', score=score)
 
 # get route for creating a quiz
@@ -100,6 +103,16 @@ def delete():
     # display delete template
     quizzes = list(db.quizzes.find())
     return render_template('delete.html', quizzes =quizzes)
+
+@app.route("/search",  methods=['POST'])
+def search():
+    query = request.form.get('query')
+    results = []
+    if query:
+        title_results = list(db.quizzes.find(
+            {"title": {"$regex": query, "$options": "i"}}))
+        results = title_results
+    return render_template("search.html", results=results)
 
 
 if __name__ == '__main__':

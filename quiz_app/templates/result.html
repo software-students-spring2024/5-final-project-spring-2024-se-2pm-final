@@ -8,8 +8,10 @@
 
 <body>
     <div class="wrapper">
-        <h2>Your Score: {{ score }}</h2>
+        <h2>Your Score: {{ score }}/100.0</h2>
+        <div>
         <a href="{{ url_for('home') }}"><button class="another-button">Another Quiz</button></a>
+        </div>
     </div>
 </body>
 
