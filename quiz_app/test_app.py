@@ -69,9 +69,15 @@ def test_delete_route(test_client):
     """
     response = test_client.get("/delete")
     assert response.status_code == 200
+    
+def test_search_route(test_client):
+    """
+    Test delete route
+    """
+    response = test_client.get("/search")
+    assert response.status_code == 200
 
-
-def test_create_submit_delete_quiz(test_client):
+def test_create_submit_search_delete_quiz(test_client):
     """
     Test create, submit, and delete quiz
     """
@@ -86,7 +92,15 @@ def test_create_submit_delete_quiz(test_client):
         },
     )
     assert response.status_code == 302  # Redirects to home route
-
+     # Search Quiz
+    response = test_client.post(
+        "/search",
+        data={
+            "title": "Test",
+        },
+    )
+    assert response.status_code == 302  # Redirects to search route
+    
     # Get created quiz id
     created_quiz_id = db.quizzes.find_one({"title": "Test Quiz"})["_id"]
 
