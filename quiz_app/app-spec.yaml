@@ -13,23 +13,7 @@ services:
     - path: /
   instance_size_slug: basic-xxs
   instance_count: 1
-envs:
-  - key: MONGO_DBNAME
-    scope: RUN_AND_BUILD_TIME
-    type: GENERAL
-    value: Cluster0
-  - key: MONGO_URI
-    scope: RUN_AND_BUILD_TIME
-    type: GENERAL
-    value: "mongodb+srv://yl7408:David205@cluster0.griovdi.mongodb.net/?retryWrites=true&w=majority"
-  - key: FLASK_APP
-    scope: RUN_AND_BUILD_TIME
-    type: GENERAL
-    value: app.py
-  - key: GITHUB_REPO
-    scope: RUN_AND_BUILD_TIME
-    type: GENERAL
-    value: https://github.com/software-students-spring2024/5-final-project-spring-2024-se-2pm-final
+
 
   
 
