@@ -95,7 +95,15 @@ def test_create_submit_search_delete_quiz(test_client):
      # Search Quiz
     response = test_client.post(
         "/search",
-        data={
+        query={
+            "title": "Test",
+        },
+    )
+    assert response.status_code == 200  # Redirects to search route
+      # Search to delete Quiz
+    response = test_client.post(
+        "/searchdeklete",
+        query={
             "title": "Test",
         },
     )

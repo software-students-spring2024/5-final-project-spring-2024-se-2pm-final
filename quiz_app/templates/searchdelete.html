@@ -2,20 +2,20 @@
 <html>
 
 <head>
-    <title>Delete quiz</title>
+    <title>Search and Delete</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 
 <body>
-    <h3>Select quiz to delete</h3>
-    <form action = "/delete" method = "POST">
+    <h3>Search results to delete</h3>
+    <form action = "/searchdelete" method = "POST">
       <div class="wrapper">
         <ul>
-            {% for quiz in quizzes %}
+            {% for quiz in results %}
             <li class="click_edit" >
                 <input type="checkbox" name="quiz_ids[]" value="{{ quiz._id }}"></input>
                 {{ quiz.title }} </li>
-            {% endfor %}
+                 {% endfor %}
         </ul>
     </div> 
     <div>
