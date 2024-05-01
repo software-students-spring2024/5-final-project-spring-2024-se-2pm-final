@@ -18,7 +18,7 @@ services:
   - key: MONGO_DBNAME
     scope: RUN_AND_BUILD_TIME
     type: GENERAL
-    value: {{MONGO_DBNAME}}
+    value: Cluser0
   - key: MONGO_URI
     scope: RUN_AND_BUILD_TIME
     type: SECRET
